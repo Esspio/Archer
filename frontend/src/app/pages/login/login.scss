@@ -1,13 +1,43 @@
 @use '../../styles/variables.scss' as v;
 
 main {
-    background-color: v.$roxo-medio-escuro;
-    height: 100dvh;
+  background-image: url('../../../../public/assets/png/archer_background.png');
+  height: 100dvh;
 
-    div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80dvh;
+    height: 80dvh;
+    background-color: v.$roxo-escuro-opaco;
+    opacity: 0.9;
+    border-radius: 10px;
+    border: 0.1px solid v.$cinza-escuro;
+    box-shadow: 0 0 8px v.$cinza-escuro;
+
+    position: absolute; /* Define a posição da div como absoluta em relação ao elemento pai ou ao viewport */
+    top: 50%; /* Move a div para 50% da altura da tela */
+    left: 50%; /* Move a div para 50% da largura da tela */
+    transform: translate(-50%, -50%);
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    /* top: 60%;
+    transform: translate(0, -60%);
+ */
+    img {
+      width: 65%;
     }
+  }
+
+  .inputs {
+    width: 100%;
+    height: 100%;
+  }
 }
