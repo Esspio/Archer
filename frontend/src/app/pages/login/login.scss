@@ -1,0 +1,13 @@
+@use '../../styles/variables.scss' as v;
+
+main {
+    background-color: v.$roxo-medio-escuro;
+    height: 100dvh;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
