@@ -4,6 +4,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 
+const INPUT_TYPES = {
+  TEXT: 'text',
+  PASSWORD: 'password',
+  NUMBER: 'number',
+  DATE: 'date',
+};
+
 @Component({
   selector: 'app-input',
   imports: [FormsModule, MatFormFieldModule, MatInputModule, MatIconModule],
@@ -17,13 +24,19 @@ export class Input {
   label = input.required<string>();
   placeholder = input.required<string>();
   icon = input.required<string>();
-
-  //Analisar motivo pelo qual nao esta vindo com o valor do front
-  botaoExibirSenha = signal<boolean>(false);
+  showPassword = signal<boolean>(false);
+  class = input<string>();
 
   clickShowPassword(event: Event) {
-    console.log(this.botaoExibirSenha());
-    this.botaoExibirSenha.set(!this.botaoExibirSenha());
+    this.showPassword.set(!this.showPassword());
     event.stopPropagation();
+  }
+
+  getInputType(): string {
+    if (this.type() === INPUT_TYPES.PASSWORD) {
+      return this.showPassword() ? INPUT_TYPES.TEXT : INPUT_TYPES.PASSWORD;
+    }
+
+    return this.type();
   }
 }

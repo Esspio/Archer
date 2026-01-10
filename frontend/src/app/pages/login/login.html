@@ -4,24 +4,37 @@
       <img src="assets/png/archer_logo_horizontal.png" alt="Logo Archer" />
     </div>
     <div class="inputs">
-      <app-input
-        type="text"
-        name="login"
-        label="Login"
-        placeholder="Insira seu login"
-        icon="person"
-      >
-      </app-input>
+      <div>
+        <app-input
+          type="text"
+          name="login"
+          label="Login"
+          placeholder="Insira seu login"
+          icon="person"
+          class="login-inputs"
+        >
+        </app-input>
 
-      <app-input
-        type="password"
-        name="password"
-        label="Senha"
-        placeholder="Insira sua senha"
-        icon="lock"
-        botaoExibirSenha="'true'"
-      >
-      </app-input>
+        <app-input
+          type="password"
+          name="password"
+          label="Senha"
+          placeholder="Insira sua senha"
+          icon="lock"
+          botaoExibirSenha="true"
+          class="login-inputs"
+        >
+        </app-input>
+
+        <label>Tipo de acesso: </label>
+        <mat-radio-group [formControl]="floatLabelControl">
+          <mat-radio-button value="0">Instrutor</mat-radio-button>
+          <mat-radio-button value="1">Aluno</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="button-login">
+        <button matButton="outlined">Login</button>
+      </div>
     </div>
   </div>
 </main>

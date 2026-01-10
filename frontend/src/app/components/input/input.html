@@ -1,23 +1,19 @@
 <div class="input-container">
   <div class="input-content">
-    <form class="example-form">
+    <form class="login-form">
       <mat-form-field appearance="outline">
         <mat-label>{{ label() }}</mat-label>
-        <input
-          [type]="botaoExibirSenha() ? 'password' : type()"
-          matInput
-          [placeholder]="placeholder()"
-        />
+        <input [type]="getInputType()" matInput [placeholder]="placeholder()" [class]="class()" />
 
-        @if (type() == 'password') {
+        @if (type() === 'password') {
           <button
             matIconButton
             matSuffix
             (click)="clickShowPassword($event)"
             [attr.aria-label]="'Exibir senha'"
-            [attr.aria-pressed]="botaoExibirSenha()"
+            [attr.aria-pressed]="showPassword()"
           >
-            <mat-icon>{{ botaoExibirSenha() ? 'visibility' : 'visibility_off' }}</mat-icon>
+            <mat-icon>{{ showPassword() ? 'visibility' : 'visibility_off' }}</mat-icon>
           </button>
         }
         <mat-icon matSuffix>{{ icon() }}</mat-icon>
