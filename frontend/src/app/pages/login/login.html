@@ -4,8 +4,23 @@
       <img src="assets/png/archer_logo_horizontal.png" alt="Logo Archer" />
     </div>
     <div class="inputs">
-      <app-input>
-        <span class="material-symbols-outlined"> person </span>
+      <app-input
+        type="text"
+        name="login"
+        label="Login"
+        placeholder="Insira seu login"
+        icon="person"
+      >
+      </app-input>
+
+      <app-input
+        type="password"
+        name="password"
+        label="Senha"
+        placeholder="Insira sua senha"
+        icon="lock"
+        botaoExibirSenha="'true'"
+      >
       </app-input>
     </div>
   </div>

@@ -1,8 +1,32 @@
-div {
+@use '../../styles/variables.scss' as v;
+
+.input-container {
   display: flex;
+  flex-direction: column;
   padding-top: 15px;
 
-  .icon {
-    flex-grow: 1;
+  input{
+    width: 70%;
+  }
+
+  .label-input{
+    padding: 0 0 10px 20%;
+    font-size: 22px;
+    font-weight: bold;
+    color: v.$cinza-claro;
+  }
+
+  .input-content{
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+
+    .icon{
+      padding-left: 10px;
+    }
+  }
+
+  .material-symbols-outlined{
+    color: white;
   }
 }

@@ -1,9 +1,27 @@
 <div class="input-container">
-  <label for="inputName">LABEL</label>
   <div class="input-content">
-    <input type="text" />
-    <div class="icon">
-      <ng-content></ng-content>
-    </div>
+    <form class="example-form">
+      <mat-form-field appearance="outline">
+        <mat-label>{{ label() }}</mat-label>
+        <input
+          [type]="botaoExibirSenha() ? 'password' : type()"
+          matInput
+          [placeholder]="placeholder()"
+        />
+
+        @if (type() == 'password') {
+          <button
+            matIconButton
+            matSuffix
+            (click)="clickShowPassword($event)"
+            [attr.aria-label]="'Exibir senha'"
+            [attr.aria-pressed]="botaoExibirSenha()"
+          >
+            <mat-icon>{{ botaoExibirSenha() ? 'visibility' : 'visibility_off' }}</mat-icon>
+          </button>
+        }
+        <mat-icon matSuffix>{{ icon() }}</mat-icon>
+      </mat-form-field>
+    </form>
   </div>
 </div>
