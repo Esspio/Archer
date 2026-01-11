@@ -1,17 +1,7 @@
 @use '../../styles/variables.scss' as v;
 
-.input-container {
-  display: flex;
-  flex-direction: column;
-  padding-top: 15px;
-
-  input {
-    width: 70%;
-  }
-
-  .input-content {
-    display: flex;
-    flex-direction: row;
-    padding-left: 15px;
-  }
+.show-password {
+  background-color: transparent;
+  border: none;
+  width: 100%;
 }

@@ -1,0 +1,11 @@
+<div class="toogle-container">
+  <label> {{ labelToggle() }}</label>
+
+  <mat-button-toggle-group>
+    @for (option of options(); track $index) {
+      <mat-button-toggle (change)="onChange(option.value)" [value]="option.value">{{
+        option.label
+      }}</mat-button-toggle>
+    }
+  </mat-button-toggle-group>
+</div>

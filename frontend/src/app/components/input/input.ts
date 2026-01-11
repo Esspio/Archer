@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Field } from '@angular/forms/signals';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -13,10 +14,9 @@ const INPUT_TYPES = {
 
 @Component({
   selector: 'app-input',
-  imports: [FormsModule, MatFormFieldModule, MatInputModule, MatIconModule],
+  imports: [FormsModule, MatFormFieldModule, MatInputModule, MatIconModule, Field],
   templateUrl: './input.html',
   styleUrl: './input.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Input {
   type = input.required<string>();
@@ -26,6 +26,7 @@ export class Input {
   icon = input.required<string>();
   showPassword = signal<boolean>(false);
   class = input<string>();
+  control = input<any>();
 
   clickShowPassword(event: Event) {
     this.showPassword.set(!this.showPassword());
@@ -38,5 +39,9 @@ export class Input {
     }
 
     return this.type();
+  }
+
+  onIconClick(event: Event) {
+    this.clickShowPassword(event);
   }
 }

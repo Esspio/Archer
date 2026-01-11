@@ -1,24 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Input } from '../../components/input/input';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { FloatLabelType } from '@angular/material/form-field';
-import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { form, minLength, required } from '@angular/forms/signals';
+import { ButtonToggleCustom } from '../../components/button-toggle-custom/button-toggle-custom';
+
+interface LoginForm {
+  login: string;
+  senha: string;
+  tipoAcesso: string;
+}
 
 @Component({
   selector: 'app-login',
-  imports: [
-    Input,
-    FormsModule,
-    ReactiveFormsModule,
-    MatCheckboxModule,
-    MatRadioModule,
-    MatButtonModule,
-  ],
+  imports: [Input, MatCheckboxModule, MatButtonModule, MatButtonToggleModule, ButtonToggleCustom],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })
 export class Login {
-  readonly floatLabelControl = new FormControl('auto' as FloatLabelType);
+  loginForm = signal<LoginForm>({
+    login: '',
+    senha: '',
+    tipoAcesso: '0',
+  });
+
+  form = form(this.loginForm, (v) => {
+    required(v.login);
+    required(v.senha);
+    minLength(v.senha, 8);
+    required(v.tipoAcesso);
+  });
+
+  submit(event: Event) {
+    event.preventDefault();
+    console.log('foi');
+    console.log(this.loginForm());
+  }
+
+  updateFormValue(selectedValue: string) {
+    this.loginForm().tipoAcesso = selectedValue;
+  }
 }
