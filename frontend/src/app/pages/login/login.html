@@ -40,8 +40,21 @@
             },
           ]"
         />
-        <div class="button-login">
+        <div class="button">
           <button matButton="filled" (click)="submit($event)">Login</button>
+        </div>
+      </div>
+
+      <div class="divider-container">
+        <mat-divider class="divider"></mat-divider>
+      </div>
+
+      <div class="cadastrar-container">
+        <mat-label>Novo por aqui? Cadastre-se agora!</mat-label>
+        <div class="button">
+          <button matButton="outlined" (click)="navigateTo(RouteEnum.CADASTRO_USUARIO)">
+            Cadastre-se
+          </button>
         </div>
       </div>
     </form>

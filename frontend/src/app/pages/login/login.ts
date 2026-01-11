@@ -5,6 +5,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { form, minLength, required } from '@angular/forms/signals';
 import { ButtonToggleCustom } from '../../components/button-toggle-custom/button-toggle-custom';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { Roteamento } from '../../utils/Roteamento';
+import { Router } from '@angular/router';
+import { RouteEnum, type RouteValue } from '../../utils/RouteEnum';
 
 interface LoginForm {
   login: string;
@@ -14,11 +19,25 @@ interface LoginForm {
 
 @Component({
   selector: 'app-login',
-  imports: [Input, MatCheckboxModule, MatButtonModule, MatButtonToggleModule, ButtonToggleCustom],
+  imports: [
+    Input,
+    MatDividerModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    ButtonToggleCustom,
+    MatFormFieldModule,
+  ],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })
-export class Login {
+export class Login extends Roteamento {
+  public RouteEnum = RouteEnum;
+
+  constructor(router: Router) {
+    super(router);
+  }
+
   loginForm = signal<LoginForm>({
     login: '',
     senha: '',
@@ -34,11 +53,13 @@ export class Login {
 
   submit(event: Event) {
     event.preventDefault();
-    console.log('foi');
-    console.log(this.loginForm());
   }
 
   updateFormValue(selectedValue: string) {
     this.loginForm().tipoAcesso = selectedValue;
+  }
+
+  navigateTo(rota: RouteValue): void {
+    super.navigate(rota);
   }
 }

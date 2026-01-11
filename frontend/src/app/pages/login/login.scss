@@ -8,7 +8,7 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 80dvh;
+    width: 85dvh;
     background-color: v.$preto;
     opacity: 0.9;
     border-radius: 10px;
@@ -35,7 +35,7 @@ main {
       padding: 30px;
     }
 
-    .button-login {
+    .button {
       display: flex;
       padding: 20px 0 0 0px;
       width: 100%;
@@ -43,6 +43,25 @@ main {
       button {
         flex-grow: 1;
       }
+    }
+
+    .divider-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .divider {
+        width: 80%;
+      }
+    }
+
+    .cadastrar-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 20px;
     }
   }
 }
