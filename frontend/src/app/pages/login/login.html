@@ -1,62 +1,62 @@
-<main>
-  <div class="login-container">
-    <div class="logo-container">
-      <img src="assets/png/archer_logo_horizontal.png" alt="Logo Archer" />
-    </div>
-    <form (submit)="submit($event)">
-      <div class="input-container">
-        <app-input
-          [control]="form.login"
-          type="text"
-          name="login"
-          label="Login"
-          placeholder="Insira seu login"
-          icon="person"
-        >
-        </app-input>
-
-        <app-input
-          [control]="form.senha"
-          type="password"
-          name="password"
-          label="Senha"
-          placeholder="Insira sua senha"
-          icon="lock"
-          botaoExibirSenha="true"
-        >
-        </app-input>
-
-        <app-button-toggle-custom
-          (selectedValue)="updateFormValue($event)"
-          labelToggle="Sou: "
-          [options]="[
-            {
-              label: 'Instrutor',
-              value: '0',
-            },
-            {
-              label: 'Aluno',
-              value: '1',
-            },
-          ]"
-        />
-        <div class="button">
-          <button matButton="filled" (click)="submit($event)">Login</button>
-        </div>
-      </div>
-
-      <div class="divider-container">
-        <mat-divider class="divider"></mat-divider>
-      </div>
-
-      <div class="cadastrar-container">
-        <mat-label>Novo por aqui? Cadastre-se agora!</mat-label>
-        <div class="button">
-          <button matButton="outlined" (click)="navigateTo(RouteEnum.CADASTRO_USUARIO)">
-            Cadastre-se
-          </button>
-        </div>
-      </div>
-    </form>
+<!-- <div class="login-container"> -->
+<div class="login-container">
+  <div class="logo-container">
+    <img src="assets/png/archer_logo_horizontal.png" alt="Logo Archer" />
   </div>
-</main>
+  <form (submit)="submit($event)">
+    <div class="input-container">
+      <app-input
+        [control]="form.login"
+        type="text"
+        name="login"
+        label="Login"
+        placeholder="Insira seu login"
+        icon="person"
+      >
+      </app-input>
+
+      <app-input
+        [control]="form.senha"
+        type="password"
+        name="password"
+        label="Senha"
+        placeholder="Insira sua senha"
+        icon="lock"
+        botaoExibirSenha="true"
+      >
+      </app-input>
+
+      <app-button-toggle-custom
+        (selectedValue)="updateFormValue($event)"
+        labelToggle="Sou: "
+        [options]="[
+          {
+            label: 'Instrutor',
+            value: '0',
+          },
+          {
+            label: 'Aluno',
+            value: '1',
+          },
+        ]"
+      />
+      <div class="button">
+        <button matButton="filled" (click)="submit($event)">Login</button>
+      </div>
+    </div>
+
+    <div class="divider-container">
+      <mat-divider class="divider"></mat-divider>
+    </div>
+
+    <div class="cadastrar-container">
+      <mat-label>Novo por aqui? Cadastre-se agora!</mat-label>
+      <div class="button">
+        <button matButton="outlined" (click)="navigateTo(RouteEnum.CADASTRO_USUARIO)">
+          Cadastre-se
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- </div> -->

@@ -1,0 +1,20 @@
+@use '../../styles/variables.scss' as v;
+
+main {
+  background-image: url('../../../../public/assets/png/archer_background.png');
+  height: 100dvh;
+
+  .template-container {
+    display: flex;
+    width: 85dvh;
+    background-color: v.$preto;
+    opacity: 0.9;
+    border-radius: 10px;
+    border: 0.1px solid v.$cinza-escuro;
+
+    position: absolute; /* Define a posição da div como absoluta em relação ao elemento pai ou ao viewport */
+    top: 50%; /* Move a div para 50% da altura da tela */
+    left: 50%; /* Move a div para 50% da largura da tela */
+    transform: translate(-50%, -50%);
+  }
+}
