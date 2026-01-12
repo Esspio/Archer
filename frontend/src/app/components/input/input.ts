@@ -1,5 +1,4 @@
 import { Component, input, signal } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { Field } from '@angular/forms/signals';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -14,7 +13,7 @@ const INPUT_TYPES = {
 
 @Component({
   selector: 'app-input',
-  imports: [FormsModule, MatFormFieldModule, MatInputModule, MatIconModule, Field],
+  imports: [MatFormFieldModule, MatInputModule, MatIconModule, Field],
   templateUrl: './input.html',
   styleUrl: './input.scss',
 })
@@ -22,7 +21,7 @@ export class Input {
   type = input.required<string>();
   name = input.required<string>();
   label = input.required<string>();
-  placeholder = input.required<string>();
+  placeholder = input<string | undefined>();
   icon = input.required<string>();
   showPassword = signal<boolean>(false);
   class = input<string>();

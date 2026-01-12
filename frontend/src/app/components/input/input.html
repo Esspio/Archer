@@ -1,22 +1,20 @@
 <div>
-  <form class="login-form">
-    <mat-form-field appearance="outline">
-      <mat-label>{{ label() }}</mat-label>
-      <input
-        [type]="getInputType()"
-        matInput
-        [placeholder]="placeholder()"
-        [class]="class()"
-        [field]="control()"
-      />
+  <mat-form-field appearance="outline">
+    <mat-label>{{ label() }}</mat-label>
+    <input
+      [type]="getInputType()"
+      matInput
+      [placeholder]="placeholder() ?? ''"
+      [class]="class()"
+      [field]="control()"
+    />
 
-      @if (type() === 'password') {
-        <mat-icon (click)="onIconClick($event)" matSuffix id="show-password">{{
-          showPassword() ? 'visibility' : 'visibility_off'
-        }}</mat-icon>
-      } @else {
-        <mat-icon matSuffix>{{ icon() }}</mat-icon>
-      }
-    </mat-form-field>
-  </form>
+    @if (type() === 'password') {
+      <mat-icon (click)="onIconClick($event)" matSuffix id="show-password">{{
+        showPassword() ? 'visibility' : 'visibility_off'
+      }}</mat-icon>
+    } @else {
+      <mat-icon matSuffix>{{ icon() }}</mat-icon>
+    }
+  </mat-form-field>
 </div>

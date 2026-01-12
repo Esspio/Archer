@@ -1,1 +1,82 @@
-<p>cadastro-usuario works!</p>
+<section class="cadastro-container">
+  <div class="logo-container">
+    <img src="assets/png/archer_logo_horizontal.png" alt="Logo Archer" />
+  </div>
+  <h1>Cadastre-se</h1>
+  <div class="input-containers">
+    <div>
+      <app-input
+        [control]="form.nome"
+        type="text"
+        name="nome"
+        label="Nome"
+        placeholder="Insira seu nome"
+        icon="badge"
+      ></app-input>
+
+      <app-input
+        [control]="form.email"
+        type="email"
+        name="email"
+        label="E-mail"
+        placeholder="Informe seu e-mail"
+        icon="email"
+      ></app-input>
+
+      <app-input
+        [control]="form.senha"
+        type="password"
+        name="password"
+        label="Senha"
+        placeholder="Insira sua senha"
+        icon="lock"
+      >
+      </app-input>
+    </div>
+    <div class="input-container-right">
+      <app-input
+        [control]="form.dataNascimento"
+        type="date"
+        name="dataNascimento"
+        label="Data de Nascimento"
+        icon="lock"
+      ></app-input>
+
+      <app-input
+        [control]="form.login"
+        type="login"
+        name="login"
+        label="Login"
+        placeholder="Informe seu login"
+        icon="person"
+      ></app-input>
+
+      <app-input
+        [control]="form.confirmeSenha"
+        type="password"
+        name="confirmeSenha"
+        label="Confirme a senha"
+        placeholder="Confirme sua senha"
+        icon="lock"
+      >
+      </app-input>
+    </div>
+  </div>
+  <app-button-toggle-custom
+    (selectedValue)="updateFormValue($event)"
+    labelToggle="Sou: "
+    [options]="[
+      {
+        label: 'Instrutor',
+        value: '0',
+      },
+      {
+        label: 'Aluno',
+        value: '1',
+      },
+    ]"
+  />
+  <div class="button">
+    <button matButton="filled">Salvar</button>
+  </div>
+</section>
