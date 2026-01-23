@@ -4,6 +4,9 @@ import { email, form, maxLength, minLength, required, validate } from '@angular/
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ButtonToggleCustom } from '../../components/button-toggle-custom/button-toggle-custom';
 import { MatButtonModule } from '@angular/material/button';
+import { Roteamento } from '../../utils/Roteamento';
+import { Router } from '@angular/router';
+import { RouteEnum, RouteValue } from '../../utils/RouteEnum';
 
 interface CadastroUsuarioForm {
   nome: string;
@@ -21,7 +24,13 @@ interface CadastroUsuarioForm {
   styleUrl: './cadastro-usuario.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CadastroUsuario {
+export class CadastroUsuario extends Roteamento {
+  public RouteEnum = RouteEnum;
+
+  constructor(router: Router) {
+    super(router);
+  }
+
   cadastroUsuarioForm = signal<CadastroUsuarioForm>({
     nome: '',
     dataNascimento: '',
@@ -75,5 +84,9 @@ export class CadastroUsuario {
     const dt = new Date(y, mo, d);
 
     return dt.getFullYear() === y && dt.getMonth() === mo && dt.getDate() === d;
+  }
+
+  navigateTo(rota: RouteValue): void {
+    super.navigate(rota);
   }
 }
