@@ -53,6 +53,8 @@ export class Login extends Roteamento {
 
   submit(event: Event) {
     event.preventDefault();
+
+    this.navigateTo(RouteEnum.HOME);
   }
 
   updateFormValue(selectedValue: string) {
