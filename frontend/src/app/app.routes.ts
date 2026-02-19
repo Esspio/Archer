@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { Login } from './pages/login/login';
 import { DefaultTemplateLogin } from './components/default-template-login/default-template-login';
-import { Home } from './pages/home/home';
 
 export const routes: Routes = [
   {
@@ -15,10 +14,10 @@ export const routes: Routes = [
         loadComponent: () =>
           import('../app/pages/cadastro-usuario/cadastro-usuario').then((c) => c.CadastroUsuario),
       },
-      {
-        path: 'home',
-        loadComponent: () => import('../app/pages/home/home').then((c) => c.Home),
-      },
     ],
+  },
+  {
+    path: 'home',
+    loadComponent: () => import('../app/pages/home/home').then((c) => c.Home),
   },
 ];
