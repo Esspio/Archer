@@ -1,0 +1,36 @@
+section {
+  padding-top: 20px;
+
+  h3 {
+    margin-left: 3px;
+  }
+}
+
+.group-content {
+  padding: 10px 0 0 8px;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  :hover {
+    background-color: rgb(105, 105, 104);
+  }
+
+  .item-content {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    border-radius: 5px;
+
+    span {
+      padding-left: 20px;
+    }
+  }
+}
+
+hr {
+  margin-top: 10px;
+  opacity: 0.2;
+}

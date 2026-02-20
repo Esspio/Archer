@@ -1,0 +1,36 @@
+<section>
+  <div class="sidenav-logo">
+    <h1>Archer</h1>
+    <hr />
+  </div>
+  <div class="sidenav-content">
+    <app-sidenav-content-group
+      tituloGrupo="{{ messages.perfil }}"
+      [itemGrupoList]="[
+        { icon: 'home', label: 'HOME', linkRef: RouteEnum.CADASTRO_USUARIO },
+        { icon: 'home', label: 'HOME', linkRef: RouteEnum.CADASTRO_USUARIO },
+      ]"
+    ></app-sidenav-content-group>
+
+    <app-sidenav-content-group
+      tituloGrupo="{{ messages.aulas }}"
+      [itemGrupoList]="[
+        { icon: 'home', label: 'HOME', linkRef: RouteEnum.CADASTRO_USUARIO },
+        { icon: 'home', label: 'HOME', linkRef: RouteEnum.CADASTRO_USUARIO },
+      ]"
+    ></app-sidenav-content-group>
+
+    <app-sidenav-content-group
+      tituloGrupo="{{ messages.configuracoes }}"
+      [itemGrupoList]="[
+        { icon: 'home', label: 'HOME', linkRef: RouteEnum.CADASTRO_USUARIO },
+        { icon: 'home', label: 'HOME', linkRef: RouteEnum.CADASTRO_USUARIO },
+      ]"
+    ></app-sidenav-content-group>
+  </div>
+  <div class="sidenav-footer">
+    <hr />
+    <p>Contato:</p>
+    <p>dev.felipe.oliver@gmail.com</p>
+  </div>
+</section>
