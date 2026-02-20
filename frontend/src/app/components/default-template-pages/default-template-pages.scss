@@ -1,0 +1,13 @@
+.default-template-page {
+  height: 100dvh;
+
+  .default-template-sidenav-content {
+    width: 15%;
+    height: 100%;
+  }
+
+  .default-template-page-content {
+    width: auto;
+    background-color: orangered;
+  }
+}

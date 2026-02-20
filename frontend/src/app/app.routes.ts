@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { Login } from './pages/login/login';
 import { DefaultTemplateLogin } from './components/default-template-login/default-template-login';
+import { DefaultTemplatePages } from './components/default-template-pages/default-template-pages';
 
 export const routes: Routes = [
   {
@@ -17,7 +18,13 @@ export const routes: Routes = [
     ],
   },
   {
-    path: 'home',
-    loadComponent: () => import('../app/pages/home/home').then((c) => c.Home),
+    path: '',
+    component: DefaultTemplatePages,
+    children: [
+      {
+        path: 'home',
+        loadComponent: () => import('../app/pages/home/home').then((c) => c.Home),
+      },
+    ],
   },
 ];
