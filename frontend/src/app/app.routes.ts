@@ -27,4 +27,14 @@ export const routes: Routes = [
       },
     ],
   },
+  {
+    path: '',
+    component: DefaultTemplateLogin,
+    children: [
+      {
+        path: '**', //Caso nenhum Route acima seja satisfeita, este será utilizada (está em último devido a estratégia de "first match wins")
+        loadComponent: () => import('../app/pages/error/error').then((c) => c.Error),
+      },
+    ],
+  },
 ];
