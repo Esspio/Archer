@@ -2,7 +2,7 @@
   <h3>{{ tituloGrupo() }}</h3>
   <div class="group-content">
     @for (itemGrupo of itemGrupoList(); track $index) {
-      <a href="#">
+      <a href="{{ itemGrupo.linkRef }}">
         <div class="item-content">
           <mat-icon fontIcon="{{ itemGrupo.icon }}"></mat-icon>
           <span>{{ itemGrupo.label }}</span>
