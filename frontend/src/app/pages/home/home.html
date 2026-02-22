@@ -1,1 +1,12 @@
-<p>home works!</p>
+<div class="container-boas-vindas">
+  <span>oi</span>
+</div>
+<mat-grid-list cols="4" rowHeight="fit">
+  @for (tile of tiles; track tile) {
+    <mat-grid-tile
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color"
+    ></mat-grid-tile>
+  }
+</mat-grid-list>
