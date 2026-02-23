@@ -1,9 +1,13 @@
+@use '../../styles/variables.scss' as v;
+
 section {
   padding: 20px 13px 0 13px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
+  background-color: v.$preto;
+  border-right: 3px solid rgb(105, 103, 103);
 
   hr {
     opacity: 0.2;

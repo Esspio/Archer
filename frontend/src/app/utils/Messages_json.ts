@@ -17,4 +17,6 @@ export const messages = {
   login: 'Login',
   home: 'Home',
   'cadastrar.usuario': 'Cadastrar Usuário',
+  'bem.vindo.person.name': 'Bem vindo {0}!',
+  'hoje.e.data': 'Hoje é {0}.',
 };
