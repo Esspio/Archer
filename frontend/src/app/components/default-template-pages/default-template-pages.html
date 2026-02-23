@@ -5,7 +5,10 @@
     ></mat-drawer>
 
     <mat-drawer-content class="default-template-page-content">
-      <router-outlet></router-outlet>
+      <div class="container-boas-vindas">
+        <span>{{ pageName() }}</span>
+      </div>
+      <router-outlet (activate)="onActivate($event)"></router-outlet>
     </mat-drawer-content>
   </mat-drawer-container>
 </main>

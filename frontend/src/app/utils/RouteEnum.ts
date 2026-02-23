@@ -1,15 +1,17 @@
+import { messages } from './Messages_json';
+
 export const RouteEnum = {
-  LOGIN: 'login',
-  CADASTRO_USUARIO: 'cadastro-usuario',
-  HOME: 'home',
-  MINHA_CONTA: 'minha-conta',
-  TROCAR_SENHA: 'trocar-senha',
-  MINHAS_AULAS: 'minhas-aulas',
-  AGENDAR_AULA: 'agendar-aula',
-  REAGENDAR_AULA: 'reagendar-aula',
-  CANCELAR_AULA: 'cancelar-aula',
-  PREFERENCIAS_CONTA: 'preferencias',
-  LOGOUT: 'logout',
+  LOGIN: { url: 'login', pageName: messages['login'] },
+  CADASTRO_USUARIO: { url: 'cadastro-usuario', pageName: messages['cadastrar.usuario'] },
+  HOME: { url: 'home', pageName: messages['home'] },
+  MINHA_CONTA: { url: 'minha-conta', pageName: messages['minha.conta'] },
+  TROCAR_SENHA: { url: 'trocar-senha', pageName: messages['trocar.senha'] },
+  MINHAS_AULAS: { url: 'minhas-aulas', pageName: messages['minhas.aulas'] },
+  AGENDAR_AULA: { url: 'agendar-aula', pageName: messages['agendar.aula'] },
+  REAGENDAR_AULA: { url: 'reagendar-aula', pageName: messages['reagendar.aula'] },
+  CANCELAR_AULA: { url: 'cancelar-aula', pageName: messages['cancelar.aula'] },
+  PREFERENCIAS_CONTA: { url: 'preferencias', pageName: messages['preferencias'] },
+  LOGOUT: { url: 'logout', pageName: messages['logout'] },
 } as const;
 
 export type RouteValue = (typeof RouteEnum)[keyof typeof RouteEnum];

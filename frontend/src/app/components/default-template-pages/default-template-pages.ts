@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterOutlet } from '@angular/router';
@@ -10,4 +10,14 @@ import { Sidenav } from '../sidenav/sidenav';
   templateUrl: './default-template-pages.html',
   styleUrl: './default-template-pages.scss',
 })
-export class DefaultTemplatePages {}
+export class DefaultTemplatePages {
+  pageName = signal<string>('');
+
+  onActivate(instanciaComponent: any) {
+    if (instanciaComponent?.pageTitle?.subscribe) {
+      instanciaComponent.pageTitle.subscribe((pageName: string) => {
+        this.pageName.set(pageName);
+      });
+    }
+  }
+}

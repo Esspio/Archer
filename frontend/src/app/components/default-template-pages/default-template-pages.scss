@@ -1,3 +1,5 @@
+@use '../../styles/variables.scss' as v;
+
 .default-template-page {
   height: 100dvh;
 
@@ -9,5 +11,9 @@
   .default-template-page-content {
     width: auto;
     background-color: orangered;
+
+    .container-boas-vindas {
+      height: v.$height-container-boas-vindas;
+    }
   }
 }

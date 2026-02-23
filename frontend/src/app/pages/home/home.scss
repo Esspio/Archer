@@ -1,11 +1,7 @@
-$height-container-boas-vindas: 10%;
-
-.container-boas-vindas {
-  height: $height-container-boas-vindas;
-}
+@use '../../styles/variables.scss' as v;
 
 mat-grid-list {
-  height: calc(100% - $height-container-boas-vindas);
+  height: calc(100% - v.$height-container-boas-vindas);
   width: auto;
   background-color: black;
 }
