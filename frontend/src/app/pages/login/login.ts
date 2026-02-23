@@ -54,6 +54,12 @@ export class Login extends Roteamento {
   submit(event: Event) {
     event.preventDefault();
 
+    const user = {
+      personName: 'Usuário Teste',
+    };
+
+    sessionStorage.setItem('userData', JSON.stringify(user));
+
     this.navigateTo(RouteEnum.HOME);
   }
 

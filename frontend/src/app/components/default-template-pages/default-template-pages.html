@@ -7,6 +7,8 @@
     <mat-drawer-content class="default-template-page-content">
       <div class="container-boas-vindas">
         <span>{{ pageName() }}</span>
+        <br />
+        <span>{{ personName() }}</span>
       </div>
       <router-outlet (activate)="onActivate($event)"></router-outlet>
     </mat-drawer-content>

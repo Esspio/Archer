@@ -12,6 +12,7 @@ import { Sidenav } from '../sidenav/sidenav';
 })
 export class DefaultTemplatePages {
   pageName = signal<string>('');
+  personName = signal<string>('');
 
   onActivate(instanciaComponent: any) {
     if (instanciaComponent?.pageTitle?.subscribe) {
@@ -19,5 +20,10 @@ export class DefaultTemplatePages {
         this.pageName.set(pageName);
       });
     }
+  }
+
+  ngOnInit() {
+    const userData = JSON.parse(sessionStorage.getItem('userData') ?? '');
+    this.personName.set(userData?.personName ?? '');
   }
 }
