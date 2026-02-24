@@ -22,7 +22,7 @@ export class Home implements OnInit {
 
   tiles: Tile[] = [
     { cols: 4, rows: 1, color: 'lightblue', component: undefined },
-    { cols: 2, rows: 2, color: 'lightgreen', component: GridItem },
+    { cols: 2, rows: 2, color: 'black', component: GridItem },
     { cols: 2, rows: 1, color: 'lightpink', component: undefined },
     { cols: 2, rows: 1, color: '#DDBDF1', component: undefined },
   ];
