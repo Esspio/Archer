@@ -16,9 +16,13 @@ section {
   .sidenav-logo {
     height: auto;
 
-    h1 {
-      padding-bottom: 20px;
+    span {
+      display: block;
+      padding-bottom: 15px;
       text-align: center;
+      font-weight: 900;
+      font-size: v.$font-size-logo;
+      text-transform: uppercase;
     }
   }
 

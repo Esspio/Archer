@@ -17,14 +17,14 @@
       padding: 15px;
 
       .nome-pagina {
-        font-size: 30px;
+        font-size: v.$font-size-titulo;
         font-weight: bold;
       }
 
       .nome-pessoa {
         display: block;
         margin-top: 10px;
-        font-size: 20px;
+        font-size: v.$font-size-texto-destaque;
         font-weight: normal;
         bottom: 0;
       }
