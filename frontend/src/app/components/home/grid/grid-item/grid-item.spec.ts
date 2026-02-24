@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProximasAulas } from './proximas-aulas';
+import { GridItem } from './grid-item';
 
-describe('ProximasAulas', () => {
-  let component: ProximasAulas;
-  let fixture: ComponentFixture<ProximasAulas>;
+describe('GridItem', () => {
+  let component: GridItem;
+  let fixture: ComponentFixture<GridItem>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProximasAulas]
+      imports: [GridItem]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ProximasAulas);
+    fixture = TestBed.createComponent(GridItem);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
