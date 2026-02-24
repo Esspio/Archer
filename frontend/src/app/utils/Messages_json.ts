@@ -19,4 +19,5 @@ export const messages = {
   'cadastrar.usuario': 'Cadastrar Usuário',
   'bem.vindo.person.name': 'Bem vindo {0}!',
   'hoje.e.data': 'Hoje é {0}.',
+  'proximas.aulas': 'Próximas aulas',
 };

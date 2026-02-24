@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, Inject, input } from '@angular/core';
 
 @Component({
   selector: 'app-grid-item',
@@ -7,5 +7,5 @@ import { Component, signal } from '@angular/core';
   styleUrl: './grid-item.scss',
 })
 export class GridItem {
-  titulo = signal<string>('Título');
+  constructor(@Inject('titulo') public titulo: string) {}
 }
