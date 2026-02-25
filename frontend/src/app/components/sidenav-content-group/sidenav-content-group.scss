@@ -5,6 +5,7 @@ section {
 
   .titulo-grupo {
     margin-left: 3px;
+    color: v.$dourado;
     font-size: v.$font-size-texto-destaque;
     font-weight: bold;
   }
@@ -35,7 +36,7 @@ section {
   }
 
   hr {
-    margin-top: 10px;
+    margin: 15px 0 15px 0;
     opacity: 0.2;
   }
 }

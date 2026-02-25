@@ -4,55 +4,7 @@
     <hr />
   </div>
   <div class="sidenav-content">
-    <app-sidenav-content-group
-      tituloGrupo="{{ messages.perfil }}"
-      [itemGrupoList]="[
-        { icon: 'badge', label: messages['minha.conta'], linkRef: RouteEnum.MINHA_CONTA },
-        {
-          icon: 'lock_reset',
-          label: messages['trocar.senha'],
-          linkRef: RouteEnum.TROCAR_SENHA,
-        },
-      ]"
-    ></app-sidenav-content-group>
-
-    <app-sidenav-content-group
-      tituloGrupo="{{ messages.aulas }}"
-      [itemGrupoList]="[
-        {
-          icon: 'calendar_month',
-          label: messages['minha.agenda'],
-          linkRef: RouteEnum.MINHA_AGENDA,
-        },
-        {
-          icon: 'event_available',
-          label: messages['agendar'],
-          linkRef: RouteEnum.AGENDAR_AULA,
-        },
-        {
-          icon: 'edit_calendar',
-          label: messages['reagendar'],
-          linkRef: RouteEnum.REAGENDAR_AULA,
-        },
-        {
-          icon: 'content_paste_off',
-          label: messages['cancelar'],
-          linkRef: RouteEnum.CANCELAR_AULA,
-        },
-      ]"
-    ></app-sidenav-content-group>
-
-    <app-sidenav-content-group
-      tituloGrupo="{{ messages.configuracoes }}"
-      [itemGrupoList]="[
-        {
-          icon: 'admin_panel_settings',
-          label: messages['preferencias'],
-          linkRef: RouteEnum.PREFERENCIAS_CONTA,
-        },
-        { icon: 'logout', label: messages['logout'], linkRef: RouteEnum.LOGOUT },
-      ]"
-    ></app-sidenav-content-group>
+    <app-sidenav-content-group></app-sidenav-content-group>
   </div>
   <div class="sidenav-footer">
     <hr />

@@ -1,14 +1,19 @@
 <section>
-  <span class="titulo-grupo">{{ tituloGrupo() }}</span>
-  <div class="group-content">
-    @for (itemGrupo of itemGrupoList(); track $index) {
-      <a href="{{ itemGrupo.linkRef }}">
-        <div class="item-content">
-          <mat-icon fontIcon="{{ itemGrupo.icon }}"></mat-icon>
-          <span>{{ itemGrupo.label }}</span>
-        </div>
-      </a>
+  @for (contentGroup of getContentGroupList(); track $index) {
+    <span class="titulo-grupo">{{ contentGroup.title }}</span>
+
+    @for (groupItem of contentGroup.groupItemList; track $index) {
+      <div class="group-content">
+        <a href="{{ groupItem.linkRef }}">
+          <div class="item-content">
+            <mat-icon fontIcon="{{ groupItem.icon }}"></mat-icon>
+            <span>{{ groupItem.label }}</span>
+          </div>
+        </a>
+      </div>
     }
-  </div>
-  <hr />
+    @if ($index + 1 !== contentGroupListLength) {
+      <hr />
+    }
+  }
 </section>
