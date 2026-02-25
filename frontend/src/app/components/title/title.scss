@@ -1,0 +1,14 @@
+@use '../../styles/variables.scss' as v;
+
+.title-container {
+  font-weight: bold;
+  color: v.$dourado;
+
+  .title-big {
+    font-size: 55px;
+  }
+
+  .title-normal {
+    font-size: v.$font-size-titulo;
+  }
+}

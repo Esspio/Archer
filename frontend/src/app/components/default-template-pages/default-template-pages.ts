@@ -4,10 +4,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { RouterOutlet } from '@angular/router';
 import { Sidenav } from '../sidenav/sidenav';
 import { messages } from '../../utils/Messages_json';
+import { Title } from '../title/title';
 
 @Component({
   selector: 'app-default-template-pages',
-  imports: [RouterOutlet, MatSidenavModule, MatButtonModule, Sidenav],
+  imports: [RouterOutlet, MatSidenavModule, MatButtonModule, Sidenav, Title],
   templateUrl: './default-template-pages.html',
   styleUrl: './default-template-pages.scss',
 })

@@ -14,19 +14,11 @@
 
     .container-boas-vindas {
       height: v.$height-container-boas-vindas;
-      padding: 15px;
-
-      .nome-pagina {
-        font-size: v.$font-size-titulo;
-        font-weight: bold;
-      }
+      padding: 10px 0 10px 15px;
 
       .nome-pessoa {
-        display: block;
-        margin-top: 10px;
         font-size: v.$font-size-texto-destaque;
         font-weight: normal;
-        bottom: 0;
       }
     }
   }

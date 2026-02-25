@@ -6,8 +6,7 @@
 
     <mat-drawer-content class="default-template-page-content">
       <div class="container-boas-vindas">
-        <span class="nome-pagina">{{ pageName() }}</span>
-        <br />
+        <app-title title="{{ pageName() }}" size="big"></app-title>
         <span class="nome-pessoa">{{ getMensagemBemVindoFormatada() }}</span>
       </div>
       <router-outlet (activate)="onActivate($event)"></router-outlet>

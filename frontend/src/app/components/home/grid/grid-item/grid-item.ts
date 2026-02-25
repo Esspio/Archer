@@ -1,9 +1,10 @@
 import { Component, Inject } from '@angular/core';
 import { NgComponentOutlet } from '@angular/common';
+import { Title } from '../../../title/title';
 
 @Component({
   selector: 'app-grid-item',
-  imports: [NgComponentOutlet],
+  imports: [NgComponentOutlet, Title],
   templateUrl: './grid-item.html',
   styleUrl: './grid-item.scss',
 })
