@@ -1,6 +1,8 @@
 <section class="grid-item">
-  <div class="grid-item-title">{{ titulo }}</div>
-  <div class="grid-item-content">
-    <ng-content></ng-content>
+  <div class="grid-item-container">
+    <div class="grid-item-title">{{ gridTitle }}</div>
+    <div class="grid-item-content">
+      <ng-container [ngComponentOutlet]="gridContent"></ng-container>
+    </div>
   </div>
 </section>

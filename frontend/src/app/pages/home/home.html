@@ -3,8 +3,9 @@
     <mat-grid-tile [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
       <ng-container
         [ngComponentOutlet]="tile.component"
-        [ngComponentOutletInjector]="criarInjector(tile.inputSignalTitulo)"
-      ></ng-container>
+        [ngComponentOutletInjector]="criarInjector(tile.gridTitle, tile.gridContent)"
+      >
+      </ng-container>
     </mat-grid-tile>
   }
 </mat-grid-list>
