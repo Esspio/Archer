@@ -16,13 +16,8 @@ section {
   .sidenav-logo {
     height: auto;
 
-    span {
-      display: block;
-      padding-bottom: 15px;
-      text-align: center;
-      font-weight: 900;
-      font-size: v.$font-size-logo;
-      text-transform: uppercase;
+    img {
+      width: 100%;
     }
   }
 
@@ -32,8 +27,22 @@ section {
 
   .sidenav-footer {
     height: auto;
+    font-size: v.$font-size-texto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .footer-label {
+      font-weight: bold;
+    }
+
+    .footer-email {
+      padding-bottom: 10px;
+    }
 
     hr {
+      width: 100%;
       margin-bottom: 10px;
     }
   }

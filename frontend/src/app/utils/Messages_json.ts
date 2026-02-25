@@ -11,7 +11,7 @@ export const messages = {
   'reagendar.aula': 'Reagendar Aula',
   cancelar: 'Cancelar',
   'cancelar.aula': 'Cancelar Aula',
-  'minhas.aulas': 'Minhas Aulas',
+  'minha.agenda': 'Minha Agenda',
   preferencias: 'Preferências',
   logout: 'Logout',
   login: 'Login',
@@ -20,4 +20,5 @@ export const messages = {
   'bem.vindo.person.name': 'Bem vindo {0}!',
   'hoje.e.data': 'Hoje é {0}.',
   'proximas.aulas': 'Próximas aulas',
+  contato: 'Contato: ',
 };

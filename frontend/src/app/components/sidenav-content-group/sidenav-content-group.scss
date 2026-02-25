@@ -1,36 +1,41 @@
+@use '../../styles/variables.scss' as v;
+
 section {
   padding-top: 20px;
 
-  h3 {
+  .titulo-grupo {
     margin-left: 3px;
-  }
-}
-
-.group-content {
-  padding: 10px 0 0 8px;
-
-  a {
-    text-decoration: none;
-    color: white;
+    font-size: v.$font-size-texto-destaque;
+    font-weight: bold;
   }
 
-  :hover {
-    background-color: rgb(105, 105, 104);
-  }
+  .group-content {
+    padding: 10px 0 0 8px;
 
-  .item-content {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-    border-radius: 5px;
+    a {
+      text-decoration: none;
+      color: white;
+    }
 
-    span {
-      padding-left: 20px;
+    :hover {
+      background-color: rgb(105, 105, 104);
+    }
+
+    .item-content {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      border-radius: 5px;
+      font-size: v.$font-size-texto;
+
+      span {
+        padding-left: 20px;
+      }
     }
   }
-}
 
-hr {
-  margin-top: 10px;
-  opacity: 0.2;
+  hr {
+    margin-top: 10px;
+    opacity: 0.2;
+  }
 }

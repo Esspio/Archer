@@ -1,6 +1,6 @@
 <section>
   <div class="sidenav-logo">
-    <span>{{ messages['archer'] }}</span>
+    <img src="assets/png/archer_logo_horizontal.png" alt="Logo Archer" />
     <hr />
   </div>
   <div class="sidenav-content">
@@ -21,8 +21,8 @@
       [itemGrupoList]="[
         {
           icon: 'calendar_month',
-          label: messages['minhas.aulas'],
-          linkRef: RouteEnum.MINHAS_AULAS,
+          label: messages['minha.agenda'],
+          linkRef: RouteEnum.MINHA_AGENDA,
         },
         {
           icon: 'event_available',
@@ -56,7 +56,8 @@
   </div>
   <div class="sidenav-footer">
     <hr />
-    <p>Contato:</p>
-    <p>dev.felipe.oliver@gmail.com</p>
+    <mat-icon fontIcon="email"></mat-icon>
+    <span class="footer-label">{{ messages['contato'] }}</span>
+    <span class="footer-email">dev.felipe.oliver@gmail.com</span>
   </div>
 </section>

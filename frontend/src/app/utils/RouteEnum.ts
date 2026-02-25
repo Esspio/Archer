@@ -6,7 +6,7 @@ export const RouteEnum = {
   HOME: { url: 'home', pageName: messages['home'] },
   MINHA_CONTA: { url: 'minha-conta', pageName: messages['minha.conta'] },
   TROCAR_SENHA: { url: 'trocar-senha', pageName: messages['trocar.senha'] },
-  MINHAS_AULAS: { url: 'minhas-aulas', pageName: messages['minhas.aulas'] },
+  MINHA_AGENDA: { url: 'minhas-aulas', pageName: messages['minha.agenda'] },
   AGENDAR_AULA: { url: 'agendar-aula', pageName: messages['agendar.aula'] },
   REAGENDAR_AULA: { url: 'reagendar-aula', pageName: messages['reagendar.aula'] },
   CANCELAR_AULA: { url: 'cancelar-aula', pageName: messages['cancelar.aula'] },
