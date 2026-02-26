@@ -42,6 +42,11 @@ export class Home implements OnInit {
       inputs: {
         gridTitle: messages['proximas.aulas'],
         gridContent: Card,
+        gridContentInputs: {
+          titulo: 'Card 1',
+          exibeBotao: true,
+          contentHtml: '<b>OI</b>',
+        },
       },
     },
     {

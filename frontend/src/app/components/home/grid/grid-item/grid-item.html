@@ -4,7 +4,10 @@
       <app-title title="{{ gridTitle() }}" size="normal"></app-title>
     </div>
     <div class="grid-item-content">
-      <ng-container [ngComponentOutlet]="gridContent()"></ng-container>
+      <ng-container
+        [ngComponentOutlet]="gridContent()"
+        [ngComponentOutletInputs]="gridContentInputs()"
+      ></ng-container>
     </div>
   </div>
 </section>

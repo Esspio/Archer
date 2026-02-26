@@ -1,9 +1,14 @@
 <mat-card appearance="outlined">
   <mat-card-header>
-    <mat-card-title>Poodle</mat-card-title>
-    <mat-card-subtitle>Non-sporting group</mat-card-subtitle>
+    <mat-card-title>{{ titulo() }}</mat-card-title>
+    <mat-card-subtitle>{{ subTitulo() }}</mat-card-subtitle>
   </mat-card-header>
-  <mat-card-actions align="end">
-    <button matButton>Learn More</button>
-  </mat-card-actions>
+
+  <mat-card-content [innerHTML]="contentHtml()"> </mat-card-content>
+
+  @if (exibeBotao()) {
+    <mat-card-actions align="end">
+      <button matButton>Botao</button>
+    </mat-card-actions>
+  }
 </mat-card>
