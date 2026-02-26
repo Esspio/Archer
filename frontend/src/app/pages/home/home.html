@@ -1,10 +1,7 @@
 <mat-grid-list cols="6" rowHeight="fit">
   @for (tile of tiles; track tile) {
     <mat-grid-tile [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
-      <ng-container
-        [ngComponentOutlet]="tile.component"
-        [ngComponentOutletInjector]="criarInjector(tile.gridTitle, tile.gridContent)"
-      >
+      <ng-container [ngComponentOutlet]="tile.component" [ngComponentOutletInputs]="tile.inputs">
       </ng-container>
     </mat-grid-tile>
   }

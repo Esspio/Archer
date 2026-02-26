@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, input, Type } from '@angular/core';
 import { NgComponentOutlet } from '@angular/common';
 import { Title } from '../../../title/title';
 
@@ -9,8 +9,6 @@ import { Title } from '../../../title/title';
   styleUrl: './grid-item.scss',
 })
 export class GridItem {
-  constructor(
-    @Inject('gridTitle') public gridTitle: string,
-    @Inject('gridContent') public gridContent: any,
-  ) {}
+  gridTitle = input<string>();
+  gridContent = input.required<Type<any>>();
 }

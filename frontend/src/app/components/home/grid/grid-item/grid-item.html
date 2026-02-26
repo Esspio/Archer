@@ -1,10 +1,10 @@
 <section class="grid-item">
   <div class="grid-item-container">
     <div class="grid-item-title">
-      <app-title title="{{ gridTitle }}" size="normal"></app-title>
+      <app-title title="{{ gridTitle() }}" size="normal"></app-title>
     </div>
     <div class="grid-item-content">
-      <ng-container [ngComponentOutlet]="gridContent"></ng-container>
+      <ng-container [ngComponentOutlet]="gridContent()"></ng-container>
     </div>
   </div>
 </section>
