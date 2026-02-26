@@ -11,5 +11,5 @@ import { Title } from '../../../title/title';
 export class GridItem {
   gridTitle = input<string>();
   gridContent = input.required<Type<any>>();
-  gridContentInputs = input<Record<string, any>>();
+  gridContentInputs = input<Record<string, any>[]>([]);
 }

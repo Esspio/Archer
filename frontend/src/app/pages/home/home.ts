@@ -42,11 +42,43 @@ export class Home implements OnInit {
       inputs: {
         gridTitle: messages['proximas.aulas'],
         gridContent: Card,
-        gridContentInputs: {
-          titulo: 'Card 1',
-          exibeBotao: true,
-          contentHtml: '<b>OI</b>',
-        },
+        gridContentInputs: [
+          {
+            titulo: '26/02/2026 - SUPERIORES',
+            exibeBotao: false,
+            contentHtml: `
+            <b>Instrutor: Roberto</b>
+          `,
+          },
+          {
+            titulo: '26/02/2026 - SUPERIORES',
+            exibeBotao: false,
+            contentHtml: `
+            <b>Instrutor: Roberto</b>
+          `,
+          },
+          {
+            titulo: '26/02/2026 - SUPERIORES',
+            exibeBotao: false,
+            contentHtml: `
+            <b>Instrutor: Roberto</b>
+          `,
+          },
+          {
+            titulo: '26/02/2026 - SUPERIORES',
+            exibeBotao: false,
+            contentHtml: `
+            <b>Instrutor: Roberto</b>
+          `,
+          },
+          {
+            titulo: '26/02/2026 - SUPERIORES',
+            exibeBotao: false,
+            contentHtml: `
+            <b>Instrutor: Roberto</b>
+          `,
+          },
+        ],
       },
     },
     {

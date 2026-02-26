@@ -4,7 +4,7 @@
     <mat-card-subtitle>{{ subTitulo() }}</mat-card-subtitle>
   </mat-card-header>
 
-  <mat-card-content [innerHTML]="contentHtml()"> </mat-card-content>
+  <mat-card-content class="card-content" [innerHTML]="contentHtml()"> </mat-card-content>
 
   @if (exibeBotao()) {
     <mat-card-actions align="end">

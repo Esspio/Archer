@@ -4,10 +4,12 @@
       <app-title title="{{ gridTitle() }}" size="normal"></app-title>
     </div>
     <div class="grid-item-content">
-      <ng-container
-        [ngComponentOutlet]="gridContent()"
-        [ngComponentOutletInputs]="gridContentInputs()"
-      ></ng-container>
+      @for (gridContentInput of gridContentInputs(); track gridContentInput) {
+        <ng-container
+          [ngComponentOutlet]="gridContent()"
+          [ngComponentOutletInputs]="gridContentInput"
+        ></ng-container>
+      }
     </div>
   </div>
 </section>
