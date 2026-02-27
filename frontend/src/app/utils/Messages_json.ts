@@ -21,4 +21,7 @@ export const messages = {
   'hoje.e.data': 'Hoje é {0}.',
   'proximas.aulas': 'Próximas aulas',
   contato: 'Contato: ',
+  avisos: 'Avisos',
+  'sequencia.de.presenca': 'Sequência de presença',
+  'progresso.do.mes': 'Progresso do mês',
 };

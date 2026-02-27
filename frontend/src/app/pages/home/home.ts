@@ -5,11 +5,11 @@ import { NgComponentOutlet } from '@angular/common';
 import { GridItem } from '../../components/home/grid/grid-item/grid-item';
 import { messages } from '../../utils/Messages_json';
 import { Card } from '../../components/card/card';
+import { LineChart } from '../../components/line-chart/line-chart';
 
 export interface Tile {
   cols: number;
   rows: number;
-  color: string;
   component: Type<GridItem>;
   inputs: Record<string, any>;
 }
@@ -27,17 +27,15 @@ export class Home implements OnInit {
     {
       cols: 4,
       rows: 1,
-      color: 'lightblue',
       component: GridItem,
       inputs: {
-        gridTitle: '123',
-        gridContent: Card,
+        gridTitle: messages['progresso.do.mes'],
+        gridContent: LineChart,
       },
     },
     {
       cols: 2,
       rows: 2,
-      color: 'black',
       component: GridItem,
       inputs: {
         gridTitle: messages['proximas.aulas'],
@@ -84,20 +82,18 @@ export class Home implements OnInit {
     {
       cols: 2,
       rows: 1,
-      color: 'lightpink',
       component: GridItem,
       inputs: {
-        gridTitle: '123',
+        gridTitle: messages['sequencia.de.presenca'],
         gridContent: Card,
       },
     },
     {
       cols: 2,
       rows: 1,
-      color: '#DDBDF1',
       component: GridItem,
       inputs: {
-        gridTitle: '123',
+        gridTitle: messages['avisos'],
         gridContent: Card,
       },
     },
