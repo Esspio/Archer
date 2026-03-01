@@ -1,0 +1,39 @@
+@use '../../styles/variables.scss' as v;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+
+  .sequencia-presenca-container {
+    display: flex;
+    justify-content: center;
+    height: 70%;
+  }
+
+  .progress-bar-container {
+    height: 30%;
+
+    .feedback-progress-bar-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 10px;
+
+      .mood-icon {
+        width: auto;
+        height: 100%;
+        color: #c0ae08;
+        font-size: 35px;
+        padding-right: 10px;
+      }
+
+      .mood-icon-message {
+        font-size: v.$font-size-texto-destaque;
+        font-weight: bold;
+      }
+    }
+  }
+}

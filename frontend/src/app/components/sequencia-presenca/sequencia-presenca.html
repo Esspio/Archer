@@ -1,0 +1,14 @@
+<div class="sequencia-presenca-container">
+  <span class="quantidade-dias">12</span>
+  <span class="message-dias-seguidos">{{ messages['dias.seguidos'] }}</span>
+</div>
+
+<div class="progress-bar-container">
+  <div class="feedback-progress-bar-container">
+    <mat-icon class="mood-icon" [style.color]="moodIcon().color">{{ moodIcon().icon }}</mat-icon>
+    <span class="mood-icon-message" [style.color]="moodIcon().color">{{ moodIcon().message }}</span>
+  </div>
+  <div class="progress-bar">
+    <app-progress-bar value="{{ progressBarValue() }}"></app-progress-bar>
+  </div>
+</div>

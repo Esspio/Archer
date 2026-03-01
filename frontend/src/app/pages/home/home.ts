@@ -1,3 +1,4 @@
+import { MOOD_ICON_ENUM, MoodIconValue } from './../../utils/ProgressBarMoodIcon';
 import { RouteEnum } from './../../utils/RouteEnum';
 import { Component, Output, EventEmitter, OnInit, Type } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -7,6 +8,7 @@ import { messages } from '../../utils/Messages_json';
 import { Card } from '../../components/card/card';
 import { LineChart } from '../../components/line-chart/line-chart';
 import { SemRegistro } from '../../components/sem-registro/sem-registro';
+import { SequenciaPresenca } from '../../components/sequencia-presenca/sequencia-presenca';
 
 export interface Tile {
   cols: number;
@@ -86,13 +88,11 @@ export class Home implements OnInit {
       component: GridItem,
       inputs: {
         gridTitle: messages['sequencia.de.presenca'],
-        gridContent: Card,
+        gridContent: SequenciaPresenca,
         gridContentInputs: [
           {
-            exibeBotao: false,
-            contentHtml: `
-            <b>Instrutor: Roberto</b>
-          `,
+            moodIcon: MOOD_ICON_ENUM.MUITO_BOM,
+            progressBarValue: 60,
           },
         ],
       },

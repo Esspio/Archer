@@ -27,4 +27,11 @@ export const messages = {
   frequencia: 'Frequência',
   'sem.avisos': 'Sem avisos.',
   'verifique.novamente.mais.tarde': 'Verifique novamente mais tarde 😉',
+  'dias.seguidos': 'Dias Seguidos',
+  excelente: 'Excelente',
+  'muito.bom': 'Muito bom',
+  bom: 'Bom',
+  mediano: 'Mediano',
+  ruim: 'Ruim',
+  'muito.ruim': 'Muito ruim',
 };
