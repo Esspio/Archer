@@ -6,6 +6,7 @@ import { GridItem } from '../../components/home/grid/grid-item/grid-item';
 import { messages } from '../../utils/Messages_json';
 import { Card } from '../../components/card/card';
 import { LineChart } from '../../components/line-chart/line-chart';
+import { SemRegistro } from '../../components/sem-registro/sem-registro';
 
 export interface Tile {
   cols: number;
@@ -86,6 +87,14 @@ export class Home implements OnInit {
       inputs: {
         gridTitle: messages['sequencia.de.presenca'],
         gridContent: Card,
+        gridContentInputs: [
+          {
+            exibeBotao: false,
+            contentHtml: `
+            <b>Instrutor: Roberto</b>
+          `,
+          },
+        ],
       },
     },
     {
@@ -94,7 +103,7 @@ export class Home implements OnInit {
       component: GridItem,
       inputs: {
         gridTitle: messages['avisos'],
-        gridContent: Card,
+        gridContent: SemRegistro,
       },
     },
   ];

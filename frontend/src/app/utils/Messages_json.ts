@@ -25,4 +25,6 @@ export const messages = {
   'sequencia.de.presenca': 'Sequência de presença',
   'treinos.ultimos.seis.meses': 'Treinos dos últimos 6 meses',
   frequencia: 'Frequência',
+  'sem.avisos': 'Sem avisos.',
+  'verifique.novamente.mais.tarde': 'Verifique novamente mais tarde 😉',
 };

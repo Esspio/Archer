@@ -4,15 +4,22 @@
       <app-title title="{{ gridTitle() }}" size="normal"></app-title>
     </div>
     <div class="grid-item-content">
-      @if (gridContentInputs().length > 0) {
-        @for (gridContentInput of gridContentInputs(); track gridContentInput) {
-          <ng-container
-            [ngComponentOutlet]="gridContent()"
-            [ngComponentOutletInputs]="gridContentInput"
-          ></ng-container>
+      @if (gridContent() !== SemRegistro) {
+        @if (gridContentInputs().length > 0) {
+          @for (gridContentInput of gridContentInputs(); track gridContentInput) {
+            <ng-container
+              [ngComponentOutlet]="gridContent()"
+              [ngComponentOutletInputs]="gridContentInput"
+            ></ng-container>
+          }
+        } @else {
+          <ng-container [ngComponentOutlet]="gridContent()"></ng-container>
         }
       } @else {
-        <ng-container [ngComponentOutlet]="gridContent()"></ng-container>
+        <app-sem-registro
+          [mensagem]="messages['sem.avisos']"
+          [isAdicionaMensagemVerifiqueNovamenteMaisTarde]="true"
+        ></app-sem-registro>
       }
     </div>
   </div>
