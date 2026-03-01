@@ -1,21 +1,3 @@
-export function obterMesesDoAnoAteHoje(locale: string = 'pt-BR'): string[] {
-  const agora = new Date();
-  const anoAtual = agora.getFullYear();
-  const mesAtual = agora.getMonth();
-
-  const meses: string[] = [];
-
-  for (let i = 0; i <= mesAtual; i++) {
-    const data = new Date(anoAtual, i, 1);
-
-    const nomeMes = data.toLocaleDateString(locale, { month: 'long' });
-
-    meses.push(nomeMes.charAt(0).toUpperCase() + nomeMes.slice(1));
-  }
-
-  return meses;
-}
-
 export function getDataAtual(): { dia: number; mes: number; ano: number } {
   const agora = new Date();
 
@@ -26,24 +8,12 @@ export function getDataAtual(): { dia: number; mes: number; ano: number } {
   };
 }
 
-export function getDiasDoMes(mes: number, ano: number): number[] {
-  const ultimoDia = new Date(ano, mes, 0).getDate();
-
-  const dias: number[] = [];
-
-  for (let dia = 1; dia <= ultimoDia; dia++) {
-    dias.push(dia);
-  }
-
-  return dias;
-}
-
 interface MesItem {
   numero: number;
   label: string;
 }
 
-export function obterUltimos6Meses(
+export function getUltimosSeisMesesConformeMesAtual(
   mesAtual: number,
   anoAtual: number,
   locale: string = 'pt-BR',

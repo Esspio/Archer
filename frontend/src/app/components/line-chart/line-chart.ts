@@ -1,6 +1,6 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
-import { getDiasDoMes, getDataAtual, obterUltimos6Meses } from '../../utils/DateUtils';
+import { getDataAtual, getUltimosSeisMesesConformeMesAtual } from '../../utils/DateUtils';
 import { messages } from '../../utils/Messages_json';
 import 'chartjs-adapter-date-fns';
 
@@ -13,8 +13,7 @@ Chart.register(...registerables);
 })
 export class LineChart implements AfterViewInit {
   dataAtual = getDataAtual();
-  diasDoMesList = getDiasDoMes(this.dataAtual.mes, this.dataAtual.ano);
-  ultimos6Meses = obterUltimos6Meses(this.dataAtual.mes, this.dataAtual.ano);
+  ultimos6Meses = getUltimosSeisMesesConformeMesAtual(this.dataAtual.mes, this.dataAtual.ano);
   labels = this.ultimos6Meses.map((m) => m.label);
 
   public config: any = {
