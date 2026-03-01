@@ -1,5 +1,7 @@
 @use '../../styles/variables.scss' as v;
 
 .chart-container {
-  background-color: v.$cinza-muito-escuro;
+  display: flex;
+  justify-content: center;
+  height: 95%;
 }

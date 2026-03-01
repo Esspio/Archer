@@ -29,7 +29,7 @@ export class Home implements OnInit {
       rows: 1,
       component: GridItem,
       inputs: {
-        gridTitle: messages['progresso.do.mes'],
+        gridTitle: messages['treinos.ultimos.seis.meses'],
         gridContent: LineChart,
       },
     },

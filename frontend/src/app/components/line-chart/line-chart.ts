@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
+import { getDiasDoMes, getDataAtual, obterUltimos6Meses } from '../../utils/DateUtils';
+import { messages } from '../../utils/Messages_json';
+import 'chartjs-adapter-date-fns';
 
 Chart.register(...registerables);
 
@@ -8,21 +11,23 @@ Chart.register(...registerables);
   templateUrl: './line-chart.html',
   styleUrl: './line-chart.scss',
 })
-export class LineChart implements OnInit {
+export class LineChart implements AfterViewInit {
+  dataAtual = getDataAtual();
+  diasDoMesList = getDiasDoMes(this.dataAtual.mes, this.dataAtual.ano);
+  ultimos6Meses = obterUltimos6Meses(this.dataAtual.mes, this.dataAtual.ano);
+  labels = this.ultimos6Meses.map((m) => m.label);
+
   public config: any = {
     type: 'line',
     data: {
-      labels: ['J', 'F', 'M'],
+      labels: this.labels,
       datasets: [
         {
-          label: 'a',
-          data: ['123', '456'],
-          backgroundColor: 'blue',
-        },
-        {
-          label: 'b',
-          data: ['1456', '859'],
-          backgroundColor: 'red',
+          label: messages['frequencia'],
+          data: ['1', '4', '15', '0', '19', '2'],
+          borderColor: '#e3bc7b',
+          backgroundColor: '#f5d091',
+          fill: true,
         },
       ],
     },
@@ -30,11 +35,30 @@ export class LineChart implements OnInit {
       responsive: true,
       plugins: {
         legend: {
+          labels: {
+            color: 'white',
+          },
           position: 'top',
+          onClick: () => {},
         },
-        title: {
+      },
+      scales: {
+        x: {
+          type: 'category',
           display: true,
-          text: 'Chart.js Line Chart',
+          position: 'left',
+          ticks: {
+            color: 'white',
+            precision: 0,
+          },
+        },
+        y: {
+          type: 'linear',
+          display: true,
+          position: 'left',
+          ticks: {
+            color: 'white',
+          },
         },
       },
     },
@@ -42,7 +66,7 @@ export class LineChart implements OnInit {
 
   chart: any;
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.chart = new Chart('line-chart', this.config);
   }
 }

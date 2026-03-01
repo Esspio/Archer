@@ -23,5 +23,6 @@ export const messages = {
   contato: 'Contato: ',
   avisos: 'Avisos',
   'sequencia.de.presenca': 'Sequência de presença',
-  'progresso.do.mes': 'Progresso do mês',
+  'treinos.ultimos.seis.meses': 'Treinos dos últimos 6 meses',
+  frequencia: 'Frequência',
 };
