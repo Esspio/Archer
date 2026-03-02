@@ -1,14 +1,22 @@
 <div class="sequencia-presenca-container">
-  <span class="quantidade-dias">12</span>
+  @if (progressBarValue() > 7) {
+    <mat-icon class="fire-icon">local_fire_department</mat-icon>
+  }
+  <span class="quantidade-dias">{{ quantidadeDiasTreinados() }}</span>
   <span class="message-dias-seguidos">{{ messages['dias.seguidos'] }}</span>
 </div>
 
 <div class="progress-bar-container">
+  <div class="progress-bar">
+    <span class="label-progress-bar"
+      >{{ messages['porcentagem.dias.treinados.no.mes'] }}
+      <b [style.color]="moodIcon().color">{{ progressBarValue() }}%</b></span
+    >
+    <app-progress-bar value="{{ progressBarValue() }}"></app-progress-bar>
+  </div>
   <div class="feedback-progress-bar-container">
+    <span class="rating">{{ messages['rating'] }} </span>
     <mat-icon class="mood-icon" [style.color]="moodIcon().color">{{ moodIcon().icon }}</mat-icon>
     <span class="mood-icon-message" [style.color]="moodIcon().color">{{ moodIcon().message }}</span>
-  </div>
-  <div class="progress-bar">
-    <app-progress-bar value="{{ progressBarValue() }}"></app-progress-bar>
   </div>
 </div>

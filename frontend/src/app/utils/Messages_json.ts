@@ -34,4 +34,6 @@ export const messages = {
   mediano: 'Mediano',
   ruim: 'Ruim',
   'muito.ruim': 'Muito ruim',
+  'porcentagem.dias.treinados.no.mes': 'Porcentagem de dias treinados no mês: ',
+  rating: 'Rating: ',
 };

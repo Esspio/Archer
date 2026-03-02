@@ -1,3 +1,4 @@
+import { messages } from './../../utils/Messages_json';
 import { Component, input } from '@angular/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
@@ -9,4 +10,5 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 })
 export class ProgressBar {
   value = input.required<string>();
+  messages = messages;
 }

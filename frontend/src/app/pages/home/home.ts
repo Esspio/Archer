@@ -93,6 +93,7 @@ export class Home implements OnInit {
           {
             moodIcon: MOOD_ICON_ENUM.MUITO_BOM,
             progressBarValue: 60,
+            quantidadeDiasTreinados: 10,
           },
         ],
       },

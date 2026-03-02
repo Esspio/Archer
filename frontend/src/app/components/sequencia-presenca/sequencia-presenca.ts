@@ -14,4 +14,5 @@ export class SequenciaPresenca {
   moodIcon = input.required<MoodIconValue>();
   messages = messages;
   progressBarValue = input.required<number>();
+  quantidadeDiasTreinados = input.required<number>();
 }
