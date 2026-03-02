@@ -1,8 +1,31 @@
+@use '../../styles/variables.scss' as v;
+
 :host {
   display: block;
   padding-bottom: 20px;
 }
 
+.label-titulo {
+  font-size: v.$font-size-sub-titulo-card;
+  font-weight: bold;
+  color: v.$dourado;
+}
+
+.label-sub-titulo {
+  font-size: v.$font-size-texto-destaque;
+}
+
 .card-content {
   padding-top: 10px;
+  font-size: v.$font-size-texto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+
+  .button-label {
+    font-size: v.$font-size-texto;
+    color: v.$roxo-medio-muito-claro !important;
+  }
 }

@@ -12,5 +12,6 @@ export class Card {
   titulo = input<string>();
   subTitulo = input<string>();
   exibeBotao = input<boolean>();
+  labelBotao = input<string>();
   contentHtml = input<string>();
 }

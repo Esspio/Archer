@@ -29,6 +29,10 @@ section {
       border-radius: 5px;
       font-size: v.$font-size-texto;
 
+      .icon {
+        color: v.$dourado;
+      }
+
       span {
         padding-left: 20px;
       }

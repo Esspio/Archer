@@ -33,6 +33,10 @@ section {
     align-items: center;
     justify-content: center;
 
+    .email-icon {
+      color: v.$dourado;
+    }
+
     .footer-label {
       font-weight: bold;
     }

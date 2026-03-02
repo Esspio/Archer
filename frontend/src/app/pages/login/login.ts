@@ -55,7 +55,7 @@ export class Login extends Roteamento {
     event.preventDefault();
 
     const user = {
-      personName: 'Usuário Teste',
+      personName: 'Felipe',
     };
 
     sessionStorage.setItem('userData', JSON.stringify(user));

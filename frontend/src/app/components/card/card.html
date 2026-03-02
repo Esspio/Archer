@@ -1,14 +1,14 @@
 <mat-card appearance="outlined">
   <mat-card-header>
-    <mat-card-title>{{ titulo() }}</mat-card-title>
-    <mat-card-subtitle>{{ subTitulo() }}</mat-card-subtitle>
+    <mat-card-title class="label-titulo">{{ titulo() }}</mat-card-title>
+    <mat-card-subtitle class="label-sub-titulo">{{ subTitulo() }}</mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content class="card-content" [innerHTML]="contentHtml()"> </mat-card-content>
 
   @if (exibeBotao()) {
-    <mat-card-actions align="end">
-      <button matButton>Botao</button>
+    <mat-card-actions class="button-container">
+      <button matButton class="button-label">{{ labelBotao() }}</button>
     </mat-card-actions>
   }
 </mat-card>

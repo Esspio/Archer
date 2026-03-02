@@ -45,35 +45,29 @@ export class Home implements OnInit {
         gridContent: Card,
         gridContentInputs: [
           {
-            titulo: '26/02/2026 - SUPERIORES',
+            titulo: '02/02/2026 - SUPERIORES',
             exibeBotao: false,
             contentHtml: `
             <b>Instrutor: Roberto</b>
           `,
           },
           {
-            titulo: '26/02/2026 - SUPERIORES',
+            titulo: '03/02/2026 - INFERIORES I',
             exibeBotao: false,
             contentHtml: `
-            <b>Instrutor: Roberto</b>
+            <b>Instrutor: Maria Antonieta</b>
           `,
           },
           {
-            titulo: '26/02/2026 - SUPERIORES',
-            exibeBotao: false,
+            titulo: '05/02/2026 - NATAÇÃO',
+            exibeBotao: true,
+            labelBotao: 'Ver detalhes',
             contentHtml: `
-            <b>Instrutor: Roberto</b>
+            <b>Instrutor: Ramón </b>
           `,
           },
           {
-            titulo: '26/02/2026 - SUPERIORES',
-            exibeBotao: false,
-            contentHtml: `
-            <b>Instrutor: Roberto</b>
-          `,
-          },
-          {
-            titulo: '26/02/2026 - SUPERIORES',
+            titulo: '08/02/2026 - SUPERIORES II',
             exibeBotao: false,
             contentHtml: `
             <b>Instrutor: Roberto</b>

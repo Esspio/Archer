@@ -1,3 +1,5 @@
+@use '../../styles/variables.scss' as v;
+
 .container-content {
   display: flex;
   flex-direction: column;
@@ -11,5 +13,10 @@
     font-size: 150px;
     width: auto;
     height: auto;
+    color: v.$dourado;
+  }
+
+  .label-message {
+    font-size: v.$font-size-texto;
   }
 }
