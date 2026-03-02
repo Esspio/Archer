@@ -36,4 +36,5 @@ export const messages = {
   'muito.ruim': 'Muito ruim',
   'porcentagem.dias.treinados.no.mes': 'Porcentagem de dias treinados no mês: ',
   rating: 'Rating: ',
+  instrutor: 'Instrutor(a): ',
 };

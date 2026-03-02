@@ -48,14 +48,14 @@ export class Home implements OnInit {
             titulo: '02/02/2026 - SUPERIORES',
             exibeBotao: false,
             contentHtml: `
-            <b>Instrutor: Roberto</b>
+            <b>Instrutor(a): Roberto</b>
           `,
           },
           {
             titulo: '03/02/2026 - INFERIORES I',
             exibeBotao: false,
             contentHtml: `
-            <b>Instrutor: Maria Antonieta</b>
+            <b>Instrutor(a): Maria Antonieta</b>
           `,
           },
           {
@@ -63,14 +63,22 @@ export class Home implements OnInit {
             exibeBotao: true,
             labelBotao: 'Ver detalhes',
             contentHtml: `
-            <b>Instrutor: Ramón </b>
+            <b>Instrutor(a): Ramón </b>
           `,
           },
           {
             titulo: '08/02/2026 - SUPERIORES II',
             exibeBotao: false,
             contentHtml: `
-            <b>Instrutor: Roberto</b>
+            <b>Instrutor(a): Roberto</b>
+          `,
+          },
+          {
+            titulo: '12/02/2026 - BOXE',
+            exibeBotao: true,
+            labelBotao: 'Ver detalhes',
+            contentHtml: `
+            <b>Instrutor(a): Cloe </b>
           `,
           },
         ],
