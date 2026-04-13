@@ -25,6 +25,10 @@ export const routes: Routes = [
         path: 'home',
         loadComponent: () => import('../app/pages/home/home').then((c) => c.Home),
       },
+      {
+        path: 'agendar-aula',
+        loadComponent: () => import('./pages/agendar-aula/agendar-aula').then((c) => c.AgendarAula),
+      },
     ],
   },
   {

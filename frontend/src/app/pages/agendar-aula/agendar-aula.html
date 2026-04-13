@@ -1,0 +1,21 @@
+<div class="container-agendar-aula">
+  <div class="input-container">
+    <form (submit)="submit($event)">
+      <app-input
+        [control]="form.dataAula"
+        type="date"
+        name="data-aula"
+        label="Data da aula"
+        placeholder="Selecione a data"
+        icon="calendar"
+      ></app-input>
+
+      <mat-form-field>
+        <mat-label>Pick a time</mat-label>
+        <input matInput [matTimepicker]="picker" />
+        <mat-timepicker-toggle matIconSuffix [for]="picker" />
+        <mat-timepicker #picker />
+      </mat-form-field>
+    </form>
+  </div>
+</div>

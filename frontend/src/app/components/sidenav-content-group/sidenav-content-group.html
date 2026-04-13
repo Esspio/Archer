@@ -4,7 +4,7 @@
 
     @for (groupItem of contentGroup.groupItemList; track $index) {
       <div class="group-content">
-        <a href="{{ groupItem.linkRef }}">
+        <a href="{{ groupItem.linkRef.url }}">
           <div class="item-content">
             <mat-icon fontIcon="{{ groupItem.icon }}" class="icon"></mat-icon>
             <span>{{ groupItem.label }}</span>
